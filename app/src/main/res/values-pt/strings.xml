@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textBtnCH">Movimentação de Cargas</string>
+    <string name="textBtnPA">Avaliação Postural</string>
+    <string name="textBtnRM">Movimento Repetitivo</string>
+    <string name="textTitle">Tipos de Avaliação Ergonômica</string>
+
+    <string name="PEA_title">Ferramentas</string>
+    <string name="PEA_btn_owas">Sistema OWAS</string>
+</resources>

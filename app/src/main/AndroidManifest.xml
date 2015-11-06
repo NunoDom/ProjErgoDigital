@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dei.estg.ipleiria.pt.ergonometrodigital" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="dei.estg.ipleiria.pt.ergodigital.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="dei.estg.ipleiria.pt.ergodigital.PosturalEvaluationActivity"
+            android:label="@string/title_activity_postural_evaluation"
+            android:parentActivityName="dei.estg.ipleiria.pt.ergodigital.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dei.estg.ipleiria.pt.ergodigital.MainActivity" />
+        </activity>
+        <activity
+            android:name="dei.estg.ipleiria.pt.ergodigital.SystemOWASActivity"
+            android:label="@string/title_activity_system_owas"
+            android:parentActivityName="dei.estg.ipleiria.pt.ergodigital.PosturalEvaluationActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dei.estg.ipleiria.pt.ergodigital.PosturalEvaluationActivity" />
+        </activity>
+        <activity
+            android:name="dei.estg.ipleiria.pt.ergodigital.SystemRULAActivity"
+            android:label="@string/title_activity_system_rula"
+            android:parentActivityName="dei.estg.ipleiria.pt.ergodigital.PosturalEvaluationActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dei.estg.ipleiria.pt.ergodigital.PosturalEvaluationActivity" />
+        </activity>
+    </application>
+
+</manifest>

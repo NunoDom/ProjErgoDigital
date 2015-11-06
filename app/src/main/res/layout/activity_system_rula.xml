@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="dei.estg.ipleiria.pt.ergodigital.SystemRULAActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sistema OWAS"
+        android:id="@+id/tvTitle"
+        android:layout_weight="1.12"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_weight="0.59">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivRULAbraco"
+                android:src="@drawable/ic_rula_rua1"
+                android:layout_weight="0.08" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivRULAantebraco"
+                android:src="@drawable/ic_rula_rua1"
+                android:layout_weight="0.08" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivRULApunho"
+                android:src="@drawable/ic_rula_rla1"
+                android:layout_weight="0.08" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="161dp"
+                android:layout_height="654dp"
+                android:orientation="vertical"
+                android:measureWithLargestChild="false"
+                android:longClickable="false"
+                android:weightSum="1"
+                android:gravity="top|center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Braço"
+                    android:id="@+id/tvRULAbraco" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRULAbraco"
+                    android:longClickable="false"
+                    android:spinnerMode="dialog"
+                    android:entries="@array/RULAbraco"
+                    android:layout_weight="0.04"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Ante Braço"
+                    android:id="@+id/tvRULAantebraco"
+                    android:gravity="bottom"
+                    android:layout_weight="0.10" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRULAantebraco"
+                    android:entries="@array/RULAantebraco"
+                    android:layout_weight="0.04"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Punho"
+                    android:id="@+id/tvRULApunho"
+                    android:layout_weight="0.14"
+                    android:gravity="bottom" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRULApunho"
+                    android:layout_weight="0.04"
+                    android:entries="@array/RULApunho"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="!!"
+                    android:id="@+id/tvRulaNADA"
+                    android:gravity="bottom" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRULANADA"
+                    android:layout_weight="0.04"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Analisar"
+                    android:id="@+id/btnAnalisar"
+                    android:onClick="click" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:layout_width="74dp"
+                android:layout_height="103dp"
+                android:id="@+id/spinner_RULA_Braco_correcao"
+                android:spinnerMode="dropdown"
+                android:entries="@array/RULAbraco_Correcao" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
